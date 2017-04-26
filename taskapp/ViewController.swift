@@ -46,9 +46,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
-        taskArray = realm.objects(Task.self).filter("category CONTAINS[c] %@" ,searchText)
-        tableView.reloadData()
-        
+            taskArray = realm.objects(Task.self).filter("category CONTAINS[c] %@" ,searchText)
+            tableView.reloadData()
     }
     
     
